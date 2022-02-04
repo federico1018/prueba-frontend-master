@@ -1,0 +1,189 @@
+/*Importo los modulos utilizados, me da mas orden a la hora de trabajar gracias a SASS*/
+html {
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+img {
+  object-fit: cover;
+}
+
+img,
+audio,
+video,
+iframe,
+canvas,
+svg,
+picture {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+}
+
+a:hover {
+  box-shadow: inset 0 -2px 0 whithe;
+  opacity: 0.8;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+/*Casi para todo uso variables pero lo mas importante que veo yo es para temas de COLOROES..*/
+/*Casi para todo uso variables pero lo mas importante que veo yo es para temas de COLOROES..*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.none {
+  display: none;
+}
+
+/*********************************HEADER, LOGO-MENU Y MENU-BTN RESPONSIVE*********************/
+.header {
+  padding: 1rem;
+  width: 100%;
+}
+
+.header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+[id] {
+  scroll-margin-top: 8ex;
+}
+
+.logo a {
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.menu-btn {
+  outline: thin solid gray;
+  border: 0;
+  cursor: pointer;
+  background-color: red;
+}
+
+.menu-btn svg {
+  fill: wheat;
+}
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rebeccapurple;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.menu.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu a {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--first-color);
+}
+
+.menu a:hover {
+  color: var(--white-color);
+  background-color: var(--first-color);
+}
+
+@media screen and (min-width: 1024px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .menu {
+    position: static;
+    width: auto;
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  [id] {
+    scroll-margin-top: 5ex;
+  }
+
+  .menu a {
+    padding: 0 1rem;
+  }
+
+  .menu a:last-child {
+    padding-right: 0;
+  }
+}
+/*Trabajo modular, aca van todos los archivos que utilizare y ademas, coloco este metodo de responsive para textos y mas cosas. */
+/*Responsive Fluid Desing*/
+/* 
+@link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+:root {
+  --step--2: clamp(0.91rem, 0.89rem + 0.1vw, 0.96rem);
+  --step--1: clamp(1.09rem, 1.05rem + 0.21vw, 1.2rem);
+  --step-0: clamp(1.31rem, 1.24rem + 0.37vw, 1.5rem);
+  --step-1: clamp(1.58rem, 1.46rem + 0.59vw, 1.88rem);
+  --step-2: clamp(1.89rem, 1.71rem + 0.89vw, 2.34rem);
+  --step-3: clamp(2.27rem, 2.01rem + 1.29vw, 2.93rem);
+  --step-4: clamp(2.72rem, 2.36rem + 1.83vw, 3.66rem);
+  --step-5: clamp(3.27rem, 2.75rem + 2.56vw, 4.58rem);
+}
+
+/*# sourceMappingURL=style.css.map */
