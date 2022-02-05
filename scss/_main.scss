@@ -1,0 +1,107 @@
+/*****************************************MAIN: SECCIÓN PRINCIPAL******************************/
+.main {
+  /*Container MAIN*/
+  .container {
+    background-color: $white;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    /*Container TEXTOS*/
+    .texts-container {
+      text-align: center;
+      &__title {
+        margin-bottom: 0.8rem;
+        font-family: "Open Sans", sans-serif;
+        font-size: var(--step-3);
+        color: $text-color;
+        font-weight: bold;
+      }
+      &__paragraph {
+        margin: 0;
+        margin-bottom: 2rem;
+        color: $light-gray;
+        font-size: var(--step-1);
+      }
+    }
+
+    /*Container BUTTONS*/
+    .buttons-container {
+      &__btn {
+        min-width: 290px;
+        padding: 0.8rem 1.2rem;
+        font-size: 1.7rem;
+        font-weight: 700;
+      }
+
+      /*Animación 1*/
+      .btn-circle {
+        color: $white;
+        margin-bottom: 1rem;
+      }
+      .btn-circle:hover {
+        background-color: rgb(15, 196, 196);
+      }
+      .btn-circle:hover .svg-circle {
+        animation: btn-circle 2s linear infinite;
+      }
+      @keyframes btn-circle {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /*Animación 2*/
+      .btn-shake {
+        background-color: $bg-primary;
+      }
+      .btn-shake:hover {
+        background-color: rgb(138, 143, 143);
+      }
+      .btn-shake:hover .svg-shake {
+        animation: btn-shake 2s linear infinite;
+      }
+      @keyframes btn-shake {
+        10%,
+        90% {
+          transform: translateX(-1px);
+        }
+        20%,
+        80% {
+          transform: translateX(2px);
+        }
+        30%,
+        50%,
+        70% {
+          transform: translateX(-4px);
+        }
+        40%,
+        60% {
+          transform: translateX(4px);
+        }
+      }
+    }
+  }
+}
+
+/*Media Querie MAIN*/
+@media screen and (min-width: 1024px) {
+  .main {
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .texts-container {
+        text-align: justify;
+      }
+      .buttons-container {
+        margin-top: -3rem;
+      }
+    }
+  }
+}

@@ -1,20 +1,20 @@
 /*********************************HEADER, LOGO-MENU Y MENU-BTN RESPONSIVE*********************/
 .header {
+  position: sticky;
+  top: 0;
   z-index: 900;
   padding: 1rem;
   width: 100%;
   background-color: $bg-primary;
-  [id] {
-    scroll-margin-top: 8ex;
-  }
 
   /*Container LOGO/NAV*/
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    /*Logo*/
     .logo {
+      margin-top: -7px;
       font-family: "Oleo Script", cursive;
       &__text {
         color: $color-logo;
@@ -27,6 +27,7 @@
     .menu-btn {
       outline: thin solid gray;
       border: 0;
+      margin-top: 0.5rem;
       cursor: pointer;
       background-color: $color-logo;
     }
@@ -35,11 +36,12 @@
     .menu {
       position: fixed;
       left: 0;
-      top: 4rem;
+      top: 5rem;
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      background-color: $bg-primary;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.5s ease;
@@ -52,10 +54,9 @@
         font-size: var(--step--1);
         font-weight: bold;
         text-align: center;
-        text-decoration: none;
         color: $text-color;
-        border: none;
 
+        /*Animación Nav*/
         &::after {
           content: "";
           position: absolute;
@@ -73,7 +74,6 @@
       .anim-bottom:hover::after {
         width: 100%;
       }
-
       .to-left::after {
         left: 0;
       }
@@ -88,9 +88,6 @@
 /*MediaQuerie MENU*/
 @media screen and (min-width: 1024px) {
   .header {
-    [id] {
-      scroll-margin-top: 5ex;
-    }
     .container {
       .menu-btn {
         display: none;

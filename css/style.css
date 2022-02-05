@@ -1,6 +1,8 @@
-/*Importo los modulos utilizados, me da mas orden a la hora de trabajar gracias a SASS*/
-/*VARIABLES. temas de Colores y Medidas extra.*/
-/***********Reseteo global de etiquetas, no uso normalize, intento usar CSS puro.*************************/
+@charset "UTF-8";
+/*Importo los modulos que utilice, me da mas orden a la hora de trabajar gracias a SASS y su modularización*/
+/*CUSTOM PROPERTIES:*/
+/*Colors*/
+/***********Reseteo global de etiquetas, no uso normalize. Intento ser minimalista y usar CSS puro.****************/
 html {
   box-sizing: border-box;
   font-family: "Alata", sans-serif;
@@ -16,6 +18,7 @@ html {
 }
 
 body {
+  min-width: 280px;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -62,8 +65,11 @@ h4 {
   margin: 0;
 }
 
-/*VARIABLES. temas de Colores y Medidas extra.*/
-/*VARIABLES. temas de Colores y Medidas extra.*/
+/*CUSTOM PROPERTIES:*/
+/*Colors*/
+/*CUSTOM PROPERTIES:*/
+/*Colors*/
+/*En este modulo añado utilidades/PROPIEDADES que un elemento va a repetir con otro elemento de el sitio web*/
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -75,51 +81,60 @@ h4 {
 }
 
 .btn-utilitie {
+  padding: 0.5rem;
   background-color: #1591c4;
-  padding: 0.8rem;
   font-size: var(--step-1);
+  border-radius: 5px;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 1s linear, color 1s linear;
 }
 
 /*********************************HEADER, LOGO-MENU Y MENU-BTN RESPONSIVE*********************/
 .header {
+  position: sticky;
+  top: 0;
   z-index: 900;
   padding: 1rem;
   width: 100%;
   background-color: #ebebeb;
   /*Container LOGO/NAV*/
 }
-.header [id] {
-  scroll-margin-top: 8ex;
-}
 .header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /*Logo*/
   /*Menu Mobile/Hamburguesa*/
   /*Menu MOBILE-FIRST*/
 }
 .header .container .logo {
+  margin-top: -7px;
   font-family: "Oleo Script", cursive;
 }
 .header .container .logo__text {
-  color: #f0615a;
+  color: #f05149;
   font-size: var(--step-4);
   text-decoration: none;
 }
 .header .container .menu-btn {
   outline: thin solid gray;
   border: 0;
+  margin-top: 0.5rem;
   cursor: pointer;
-  background-color: #f0615a;
+  background-color: #f05149;
 }
 .header .container .menu {
   position: fixed;
   left: 0;
-  top: 4rem;
+  top: 5rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #ebebeb;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
@@ -133,9 +148,8 @@ h4 {
   font-size: var(--step--1);
   font-weight: bold;
   text-align: center;
-  text-decoration: none;
   color: #444444;
-  border: none;
+  /*Animación Nav*/
 }
 .header .container .menu__enlace::after {
   content: "";
@@ -163,9 +177,6 @@ h4 {
 
 /*MediaQuerie MENU*/
 @media screen and (min-width: 1024px) {
-  .header [id] {
-    scroll-margin-top: 5ex;
-  }
   .header .container .menu-btn {
     display: none;
   }
@@ -186,8 +197,102 @@ h4 {
     padding-right: 0;
   }
 }
-/*Trabajare el RESPONSIVE_MOBILE-FIRST*/
-/*Arquitectura modular, aca van todos los archivos que utilizare y ademas, coloco este metodo de responsive para textos y mas cosas. */
+/*****************************************MAIN: SECCIÓN PRINCIPAL******************************/
+.main {
+  /*Container MAIN*/
+}
+.main .container {
+  background-color: white;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /*Container TEXTOS*/
+  /*Container BUTTONS*/
+}
+.main .container .texts-container {
+  text-align: center;
+}
+.main .container .texts-container__title {
+  margin-bottom: 0.8rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--step-3);
+  color: #444444;
+  font-weight: bold;
+}
+.main .container .texts-container__paragraph {
+  margin: 0;
+  margin-bottom: 2rem;
+  color: #5a5a5a;
+  font-size: var(--step-1);
+}
+.main .container .buttons-container {
+  /*Animación 1*/
+  /*Animación 2*/
+}
+.main .container .buttons-container__btn {
+  min-width: 290px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.main .container .buttons-container .btn-circle {
+  color: white;
+  margin-bottom: 1rem;
+}
+.main .container .buttons-container .btn-circle:hover {
+  background-color: #0fc4c4;
+}
+.main .container .buttons-container .btn-circle:hover .svg-circle {
+  animation: btn-circle 2s linear infinite;
+}
+@keyframes btn-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.main .container .buttons-container .btn-shake {
+  background-color: #ebebeb;
+}
+.main .container .buttons-container .btn-shake:hover {
+  background-color: #8a8f8f;
+}
+.main .container .buttons-container .btn-shake:hover .svg-shake {
+  animation: btn-shake 2s linear infinite;
+}
+@keyframes btn-shake {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+  20%, 80% {
+    transform: translateX(2px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}
+
+/*Media Querie MAIN*/
+@media screen and (min-width: 1024px) {
+  .main .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .main .container .texts-container {
+    text-align: justify;
+  }
+  .main .container .buttons-container {
+    margin-top: -3rem;
+  }
+}
+/*Este metodo para Textos fluidos me ha gustado utilizar, espero no sea un problema..*/
 /*Responsive Fluid Desing*/
 /* 
 @link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */

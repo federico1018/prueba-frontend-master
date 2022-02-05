@@ -1,5 +1,6 @@
 @import "variables";
-/***********Reseteo global de etiquetas, no uso normalize, intento usar CSS puro.*************************/
+
+/***********Reseteo global de etiquetas, no uso normalize. Intento ser minimalista y usar CSS puro.****************/
 html {
   box-sizing: border-box;
   font-family: "Alata", sans-serif;
@@ -13,6 +14,7 @@ html {
   box-sizing: inherit;
 }
 body {
+  min-width: 280px;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
