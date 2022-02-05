@@ -1,4 +1,5 @@
 /*Use Vanilla.Js para lograr la interración con el menu mobile.*/
+
 /* ********** Menu_Mobile ********** */
 ((d) => {
   const $btnMenu = d.querySelector(".menu-btn"),
@@ -11,7 +12,7 @@
   });
 
   d.addEventListener("click", (e) => {
-    if (!e.target.matches(".menu a")) return false;
+    if (!e.target.matches(".menu__enlace")) return false;
 
     $btnMenu.firstElementChild.classList.remove("none");
     $btnMenu.lastElementChild.classList.add("none");

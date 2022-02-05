@@ -1,6 +1,9 @@
+@import "variables";
+/***********Reseteo global de etiquetas, no uso normalize, intento usar CSS puro.*************************/
 html {
   box-sizing: border-box;
-  font-family: "Public Sans", sans-serif;
+  font-family: "Alata", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
 }
@@ -13,6 +16,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background-color: $bg-primary;
 }
 img {
   object-fit: cover;
@@ -30,15 +34,6 @@ picture {
 a {
   color: black;
   text-decoration: none;
-  transition: all 0.2s ease-out;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-}
-a:hover {
-  box-shadow: inset 0 -2px 0 whithe;
-  opacity: 0.8;
 }
 ul {
   padding: 0;

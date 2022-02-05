@@ -8,3 +8,9 @@
 .none {
   display: none;
 }
+
+.btn-utilitie {
+  background-color: $bg-btn;
+  padding: 0.8rem;
+  font-size: var(--step-1);
+}
