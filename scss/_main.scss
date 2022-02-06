@@ -1,6 +1,6 @@
 /*****************************************MAIN: SECCIÓN PRINCIPAL******************************/
 .main {
-  /*Container MAIN*/
+  //Container MAIN
   .container {
     background-color: $white;
     padding: 4rem;
@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
 
-    /*Container TEXTOS*/
+    //Container TEXTOS
     .texts-container {
       text-align: center;
       &__title {
@@ -27,7 +27,7 @@
       }
     }
 
-    /*Container BUTTONS*/
+    //Container BUTTONS
     .buttons-container {
       &__btn {
         min-width: 290px;
@@ -36,7 +36,7 @@
         font-weight: 700;
       }
 
-      /*Animación 1*/
+      //Animación 1
       .btn-circle {
         color: $white;
         margin-bottom: 1rem;
@@ -56,7 +56,7 @@
         }
       }
 
-      /*Animación 2*/
+      //Animación 2
       .btn-shake {
         background-color: $bg-primary;
       }
@@ -89,8 +89,8 @@
   }
 }
 
-/*Media Querie MAIN*/
-@media screen and (min-width: 1024px) {
+//Media Querie MAIN
+@media screen and (min-width: 64em) {
   .main {
     .container {
       flex-direction: row;

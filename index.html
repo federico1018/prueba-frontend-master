@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f05149">
     <!--Link / Fuente de la pagina-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,9 +26,11 @@
     <!--HEADER, LOGO-MENU Y MENU-BTN RESPONSIVE.-->
     <header class="header">
         <section class="container">
+            <!--Logo-->
             <div class="logo">
                 <a class="logo__text" href="#">myLorem</a>
             </div>
+            <!--Btn-Burger-->
             <button class="menu-btn">
                 <svg class="menu-btn__svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24">
@@ -39,6 +42,7 @@
                         d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z" />
                 </svg>
             </button>
+            <!--Nav-->
             <nav class="menu">
                 <a class="menu__enlace  anim-bottom to-left" href="#">Welcome </a>
                 <a class="menu__enlace  anim-bottom to-left" href="#">Dropdonw</a>
@@ -48,9 +52,10 @@
             </nav>
         </section>
     </header>
-    <!--Main, Sección principal.-->
+    <!--MAIN PRINCIPAL.-->
     <main class="main">
         <section class="container">
+            <!--Container-Left-text-->
             <div class="texts-container">
                 <h1 class="texts-container__title ">
                     Hi. This is Lorem
@@ -61,6 +66,7 @@
                     y archivos de texto.
                 </p>
             </div>
+            <!--Container-right-btns-->
             <div class="buttons-container">
                 <button class="buttons-container__btn btn-utilitie btn-circle" type="button">Ok Let's go
                     <svg class="svg-circle" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white"
@@ -79,8 +85,36 @@
             </div>
         </section>
     </main>
+    <!--SECTION CARDS-->
+    <section class="cards">
+        <div class="container">
+            <!--Card 1-->
+            <article class="card-container animatio-card">
+                <img class="card-container__img" src="/images/img-vegetation.jpg" alt="Img-vegetation">
+                <h3 class="card-container__title-img">Put something here</h3>
+                <h4 class="card-container__title">Maybe here as well i think</h4>
+                <small class="card-container__small">Phasellus quam turpís, feugiat sit amet in, hendrerit <br>
+                    in lectus. Praesent sed semper ament bidendum <br> tristique fringilla.</small>
+            </article>
+            <!--Card 2-->
+            <article class="card-container animnation-card">
+                <img class="card-container__img" src="/images/img-moutains.jpg" alt="Img-moutains">
+                <h3 class="card-container__title-img">An interesting title</h3>
+                <h4 class="card-container__title">This is also an interesting subtitle</h4>
+                <small class="card-container__small">Phasellus quam turpís, feugiat sit amet in, hendrerit <br>
+                    in lectus. Praesent sed semper ament bidendum <br> tristique fringilla.</small>
+            </article>
+            <!--Card 3-->
+            <article class="card-container animation-card">
+                <img class="card-container__img" src="/images/img-town.jpg" alt="Img-town">
+                <h3 class="card-container__title-img">Oh, and finally ...</h3>
+                <h4 class="card-container__title">Here's another intriguing subtitle</h4>
+                <small class="card-container__small">Phasellus quam turpís, feugiat sit amet in, hendrerit <br>
+                    in lectus. Praesent sed semper ament bidendum <br> tristique fringilla.</small>
+            </article>
+        </div>
+    </section>
 
-    <!--RECORDAR LOS MZ-WE- BORDER RADIUS-->
     <br><br><br><br><br><br><br><br><br><br><br><br><br>
     <script src="/script.js"></script>
 </body>

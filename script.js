@@ -1,4 +1,4 @@
-/*Use Vanilla.Js para lograr la interración con el menu mobile.*/
+/*Use Vanilla.Js para lograr la interración con el Menu Mobile.*/
 
 /* ********** Menu_Mobile ********** */
 ((d) => {

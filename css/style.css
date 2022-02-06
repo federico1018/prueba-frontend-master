@@ -61,7 +61,8 @@ button {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   margin: 0;
 }
 
@@ -97,18 +98,14 @@ h4 {
   position: sticky;
   top: 0;
   z-index: 900;
-  padding: 1rem;
+  padding: 1.5rem;
   width: 100%;
   background-color: #ebebeb;
-  /*Container LOGO/NAV*/
 }
 .header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*Logo*/
-  /*Menu Mobile/Hamburguesa*/
-  /*Menu MOBILE-FIRST*/
 }
 .header .container .logo {
   margin-top: -7px;
@@ -149,7 +146,6 @@ h4 {
   font-weight: bold;
   text-align: center;
   color: #444444;
-  /*Animación Nav*/
 }
 .header .container .menu__enlace::after {
   content: "";
@@ -175,8 +171,7 @@ h4 {
   pointer-events: auto;
 }
 
-/*MediaQuerie MENU*/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .header .container .menu-btn {
     display: none;
   }
@@ -198,9 +193,6 @@ h4 {
   }
 }
 /*****************************************MAIN: SECCIÓN PRINCIPAL******************************/
-.main {
-  /*Container MAIN*/
-}
 .main .container {
   background-color: white;
   padding: 4rem;
@@ -208,8 +200,6 @@ h4 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /*Container TEXTOS*/
-  /*Container BUTTONS*/
 }
 .main .container .texts-container {
   text-align: center;
@@ -226,10 +216,6 @@ h4 {
   margin-bottom: 2rem;
   color: #5a5a5a;
   font-size: var(--step-1);
-}
-.main .container .buttons-container {
-  /*Animación 1*/
-  /*Animación 2*/
 }
 .main .container .buttons-container__btn {
   min-width: 290px;
@@ -279,8 +265,7 @@ h4 {
   }
 }
 
-/*Media Querie MAIN*/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
   .main .container {
     flex-direction: row;
     justify-content: space-between;
@@ -290,6 +275,82 @@ h4 {
   }
   .main .container .buttons-container {
     margin-top: -3rem;
+  }
+}
+.cards .container {
+  padding: 2rem 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cards .container .card-container {
+  position: relative;
+  height: 450px;
+  max-width: 360px;
+  min-width: 250px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  /*Aún me cuesta un poco entender los selectores para las animaciones, ya que con sass es dificil por la identación
+  sim enbargo, entendi mucho maquetando esta pagina web.*/
+}
+.cards .container .card-container__img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+.cards .container .card-container__title-img {
+  position: absolute;
+  top: 15rem;
+  left: 0.5rem;
+  font-weight: 900;
+  color: white;
+}
+.cards .container .card-container__title {
+  padding: 0 0.8rem;
+  padding-bottom: 0.5rem;
+  font-weight: 900;
+  font-size: var(--step--2);
+  color: #444444;
+}
+.cards .container .card-container__small {
+  position: absolute;
+  left: 0.8rem;
+  line-height: 1.8rem;
+  color: #5a5a5a;
+}
+.cards .container .card-container:hover .card-container__img {
+  animation: animation-card-img 2s ease-in-out 1 forwards;
+}
+@keyframes animation-card-img {
+  0% {
+    transform: perspective(10rem) translateZ(0rem);
+  }
+  100% {
+    transform: perspective(10rem) translateZ(-2rem);
+  }
+}
+.cards .container .card-container:hover .card-container__title-img {
+  animation: animation-card-title 2s ease-in-out 1 forwards;
+}
+@keyframes animation-card-title {
+  0% {
+    transform: perspective(10rem) rotate(0) translatey(0%) translateX(0%);
+  }
+  100% {
+    text-decoration: underline;
+    transform: perspective(10rem) rotate(360deg) translateY(-180%) translateX(20%);
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .cards .container {
+    padding: 3rem 0;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 /*Este metodo para Textos fluidos me ha gustado utilizar, espero no sea un problema..*/
