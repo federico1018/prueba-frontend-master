@@ -353,6 +353,94 @@ h5 {
     justify-content: space-between;
   }
 }
+.interesting {
+  padding: 2rem;
+  background-color: white;
+}
+.interesting .container {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.interesting .container .samples-container {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.interesting .container .samples-container__title {
+  color: #444444;
+  font-weight: bold;
+}
+.interesting .container .samples-container .images {
+  width: 300px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+.interesting .container .samples-container .images img {
+  width: 150px;
+  height: 80px;
+  border-radius: 8px;
+}
+.interesting .container .samples-container__btn {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  gap: 0.4rem;
+  font-size: var(--step-0);
+  color: white;
+  font-weight: bold;
+}
+.interesting .container .info-container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.interesting .container .info-container__title {
+  text-align: center;
+  color: #444444;
+}
+.interesting .container .info-container__paragraph {
+  text-align: center;
+  line-height: 1.5rem;
+  color: #5a5a5a;
+}
+.interesting .container .info-container__btn {
+  padding: 0.5rem 1.5rem;
+  gap: 1rem;
+  font-size: var(--step-0);
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 64em) {
+  .interesting {
+    padding: 5rem 3rem;
+  }
+  .interesting .container {
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .interesting .container .samples-container {
+    min-height: 300px;
+    align-items: flex-start;
+  }
+  .interesting .container .info-container {
+    max-width: 65%;
+    align-items: flex-start;
+  }
+  .interesting .container .info-container__title {
+    font-size: var(--step-1);
+  }
+  .interesting .container .info-container__paragraph {
+    margin-bottom: 1rem;
+  }
+}
 /*Este metodo para Textos fluidos me ha gustado utilizar, espero no sea un problema..*/
 /*Responsive Fluid Desing*/
 /* 
