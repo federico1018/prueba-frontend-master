@@ -91,8 +91,59 @@ h5 {
   justify-content: space-between;
   align-items: center;
   transition: background-color 1s linear, color 1s linear;
+  -webkit-transition: background-color 800ms ease-out;
+  -moz-transition: background-color 800ms ease-out;
+  -ms-transition: background-color 800ms ease-out;
+  -o-transition: background-color 8500ms ease-out;
 }
 
+.btn-circle {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.btn-circle:hover {
+  background-color: #0fc4c4;
+}
+
+.btn-circle:hover .svg-circle {
+  animation: btn-circle 2s linear infinite;
+}
+
+@keyframes btn-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.btn-shake {
+  background-color: #ebebeb;
+}
+
+.btn-shake:hover {
+  background-color: #8a8f8f;
+}
+
+.btn-shake:hover .svg-shake {
+  animation: btn-shake 2s linear infinite;
+}
+
+@keyframes btn-shake {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+  20%, 80% {
+    transform: translateX(2px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}
 /*********************************HEADER, LOGO-MENU Y MENU-BTN RESPONSIVE*********************/
 .header {
   position: sticky;
@@ -155,6 +206,10 @@ h5 {
   height: 5px;
   background-color: #444444;
   transition: width 800ms 300ms;
+  -webkit-transition: width 800ms ease-out;
+  -moz-transition: width 800ms ease-out;
+  -ms-transition: width 800ms ease-out;
+  -o-transition: width 8500ms ease-out;
 }
 .header .container .menu__enlace:hover::after {
   width: 100%;
@@ -222,47 +277,6 @@ h5 {
   padding: 0.8rem 1.2rem;
   font-size: 1.7rem;
   font-weight: 700;
-}
-.main .container .buttons-container .btn-circle {
-  color: white;
-  margin-bottom: 1rem;
-}
-.main .container .buttons-container .btn-circle:hover {
-  background-color: #0fc4c4;
-}
-.main .container .buttons-container .btn-circle:hover .svg-circle {
-  animation: btn-circle 2s linear infinite;
-}
-@keyframes btn-circle {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.main .container .buttons-container .btn-shake {
-  background-color: #ebebeb;
-}
-.main .container .buttons-container .btn-shake:hover {
-  background-color: #8a8f8f;
-}
-.main .container .buttons-container .btn-shake:hover .svg-shake {
-  animation: btn-shake 2s linear infinite;
-}
-@keyframes btn-shake {
-  10%, 90% {
-    transform: translateX(-1px);
-  }
-  20%, 80% {
-    transform: translateX(2px);
-  }
-  30%, 50%, 70% {
-    transform: translateX(-4px);
-  }
-  40%, 60% {
-    transform: translateX(4px);
-  }
 }
 
 @media screen and (min-width: 64em) {
@@ -353,6 +367,7 @@ h5 {
     justify-content: space-between;
   }
 }
+/****************************************************Section Interesting************************************************/
 .interesting {
   padding: 2rem;
   background-color: white;
@@ -384,6 +399,10 @@ h5 {
   width: 150px;
   height: 80px;
   border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 .interesting .container .samples-container__btn {
   margin-bottom: 1.5rem;
@@ -416,6 +435,15 @@ h5 {
   color: white;
   font-weight: bold;
 }
+.interesting .container .btn-circle {
+  margin-bottom: 0;
+}
+.interesting .container .btn-shake {
+  background-color: #1591c4;
+}
+.interesting .container .btn-shake:hover {
+  background-color: #0fc4c4;
+}
 
 @media screen and (min-width: 64em) {
   .interesting {
@@ -439,6 +467,85 @@ h5 {
   }
   .interesting .container .info-container__paragraph {
     margin-bottom: 1rem;
+    text-align: justify;
+  }
+}
+.footer .container {
+  padding: 1rem 0;
+}
+.footer .container .nav-container {
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .container .nav-container__title {
+  color: #444444;
+}
+.footer .container .nav-container__enlace {
+  font-size: var(--step--2);
+  text-decoration: underline;
+  text-align: justify;
+  color: #5a5a5a;
+}
+.footer .container .nav-container__enlace:hover {
+  opacity: 0.5;
+}
+.footer .container .nav-container__info {
+  color: #5a5a5a;
+}
+.footer .container .nav-container .redes-container {
+  max-width: 700px;
+  margin: 1rem 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer .container .nav-container .redes-container__icon {
+  padding: 5px;
+  background-color: #444444;
+  border-radius: 8px;
+}
+.footer .container .nav-container .redes-container__icon svg:hover {
+  opacity: 0.5;
+}
+.footer .container .small-text {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f05149;
+}
+
+@media screen and (min-width: 48em) {
+  .footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer .container .small-text {
+    grid-column: 1/3;
+  }
+}
+@media screen and (min-width: 75em) {
+  .footer .container {
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .footer .container .nav-container {
+    align-items: flex-start;
+  }
+  .footer .container .nav-container__title {
+    margin-bottom: 1.5rem;
+  }
+  .footer .container .nav-container .redes-container {
+    margin: 0;
+    gap: 0.5rem;
+  }
+  .footer .container .small-text {
+    grid-column: 1/5;
   }
 }
 /*Este metodo para Textos fluidos me ha gustado utilizar, espero no sea un problema..*/

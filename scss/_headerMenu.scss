@@ -65,6 +65,10 @@
           height: 5px;
           background-color: $text-color;
           transition: width 800ms 300ms;
+          -webkit-transition: width 800ms ease-out;
+          -moz-transition: width 800ms ease-out;
+          -ms-transition: width 800ms ease-out;
+          -o-transition: width 8500ms ease-out;
         }
         &:hover::after {
           width: 100%;

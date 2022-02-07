@@ -1,3 +1,4 @@
+/****************************************************Section Interesting************************************************/
 .interesting {
   padding: 2rem;
   background-color: $white;
@@ -5,6 +6,7 @@
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
+    //Section left
     .samples-container {
       margin-bottom: 1rem;
       display: flex;
@@ -16,6 +18,7 @@
         color: $text-color;
         font-weight: bold;
       }
+      //Img4
       .images {
         width: 300px;
         display: grid;
@@ -25,6 +28,10 @@
           width: 150px;
           height: 80px;
           border-radius: 8px;
+          -webkit-border-radius: 8px;
+          -moz-border-radius: 8px;
+          -ms-border-radius: 8px;
+          -o-border-radius: 8px;
         }
       }
       &__btn {
@@ -36,6 +43,7 @@
         font-weight: bold;
       }
     }
+    //Section right
     .info-container {
       display: flex;
       gap: 1rem;
@@ -58,6 +66,16 @@
         color: $white;
         font-weight: bold;
       }
+    }
+    //Modificando las animaciones
+    .btn-circle {
+      margin-bottom: 0;
+    }
+    .btn-shake {
+      background-color: $bg-btn;
+    }
+    .btn-shake:hover {
+      background-color: rgb(15, 196, 196);
     }
   }
 }
@@ -82,6 +100,7 @@
         }
         &__paragraph {
           margin-bottom: 1rem;
+          text-align: justify;
         }
       }
     }

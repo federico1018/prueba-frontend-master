@@ -21,4 +21,58 @@
   justify-content: space-between;
   align-items: center;
   transition: background-color 1s linear, color 1s linear;
+  -webkit-transition: background-color 800ms ease-out;
+  -moz-transition: background-color 800ms ease-out;
+  -ms-transition: background-color 800ms ease-out;
+  -o-transition: background-color 8500ms ease-out;
+}
+
+//Animación Circle
+.btn-circle {
+  color: $white;
+  margin-bottom: 2rem;
+}
+.btn-circle:hover {
+  background-color: rgb(15, 196, 196);
+}
+.btn-circle:hover .svg-circle {
+  animation: btn-circle 2s linear infinite;
+}
+@keyframes btn-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+//Animación Shake
+.btn-shake {
+  background-color: $bg-primary;
+}
+.btn-shake:hover {
+  background-color: rgb(138, 143, 143);
+}
+.btn-shake:hover .svg-shake {
+  animation: btn-shake 2s linear infinite;
+}
+@keyframes btn-shake {
+  10%,
+  90% {
+    transform: translateX(-1px);
+  }
+  20%,
+  80% {
+    transform: translateX(2px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-4px);
+  }
+  40%,
+  60% {
+    transform: translateX(4px);
+  }
 }
