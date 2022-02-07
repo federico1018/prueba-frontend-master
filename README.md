@@ -1,6 +1,8 @@
 # **PRUEBA REALIZADA POR FEDERICO ALDANA AREVALO**
 
-### Aqui anexo mi prueba la cual realice con exito, quiza hay cosas que puedo mejorar pero voy aprendiendo cada día, ademas con la practica de este y varios ejercicios/proyectos que he hecho he avanzado mucho.
+#### Aqui anexo mi prueba la cual realice con exito, quiza hay cosas que puedo mejorar pero voy aprendiendo cada día, ademas con la practica de este y varios ejercicios/proyectos que he realizado se que he avanzado mucho.
+
+#### Las tecnologias que use en esta prueba son las descritas por la misma, eso si, utilice la arquitectura BEM. Compartire el repositorio por Git-Hub, no he usado Git-Lab pero si me lo piden puedo compartir el repositorio por ahi. Gracias.
 
 # **MAQUETADOR WEB**
 
@@ -9,8 +11,6 @@
 ## **PERFIL DEL CARGO**
 
 #### Maquetador web con experiencia de 6 meses en desarrollo web, con conocimientos en pug, scss, javascript y diseño responsive, que no tenga miedo a los retos y que sea ágil proponiendo soluciones. Tome en cuenta las instrucciones dadas antes de empezar la prueba, las segui al pie de la letra, si me deje algo, mil disculpas. Por ultimo muchas gracias por la oportunidad y quedare al pendiente.
-
-### Las tecgnologias que use en esta prueba son las descritas por la misma, eso si, utilice la arquitectura BEM. Compartire el repositorio por Git-Hub, no he usado Git-Lab pero si me lo piden puedo compartir el repositorio por ahi. Gracias.
 
 ## **Estudios y/o perfiles relacionados:**
 
